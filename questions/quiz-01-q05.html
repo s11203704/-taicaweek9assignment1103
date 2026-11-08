@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第 5 題 - 114年第四次 AI應用規劃師【第一科：人工智慧基礎概論】</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- 頂部導覽列 (Navbar) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span>⚡</span> iPAS AI 互動題庫
+      </a>
+      <div style="display: flex; gap: 0.5rem;">
+        <a href="quiz-01-ai-basic.html" class="nav-link">📋 查看全部50題</a>
+        <a href="../index.html" class="nav-link">← 返回題庫首頁</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 單元標題 (Hero Section) -->
+  <section class="hero">
+    <div class="hero-container">
+      <span class="badge">人工智慧基礎概論 ‧ 單題精準複習</span>
+      <h1>第 5 題 / 共 50 題</h1>
+      <p>114 年第四次 AI 應用規劃師 初級能力鑑定 公告試題</p>
+    </div>
+  </section>
+
+  <!-- 主考題互動區 -->
+  <main class="container">
+    <article class="question-card" id="q5">
+      <div class="question-header">
+        <span class="q-badge">第 5 題</span>
+        <h2 class="q-title">在機器學習中，「偏差與變異權衡（Bias-Variance Tradeoff）」主要用來解決下列哪一類型的問題？</h2>
+      </div>
+      <ul class="options-list" id="opts-5">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">因資料來源或收集方式限制，導致模型學習到的資訊不足</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">測試資料樣本與訓練資料高度重複，造成模型泛化能力評估失準</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">訓練資料中類別分布不均，使模型在少數類別上表現不佳</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">如何在模型偏差與變異之間取得平衡，以避免過度擬合或欠擬合</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('5', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-5">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          「偏差與變異權衡（Bias-Variance Tradeoff）」是機器學習的核心課題：高偏差通常對應模型過度簡化導致的「欠擬合（Underfitting）」，高變異則對應模型對訓練資料過度敏感所造成的「過度擬合（Overfitting）」，目標是取得兩者平衡以最大化泛化能力。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：偏差與變異權衡 (Bias-Variance Tradeoff)</div>
+          <p>高偏差 ➔ 欠擬合 (Underfitting)；高變異 ➔ 過度擬合 (Overfitting)；兩者權衡能使泛化誤差最小化。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 單題翻頁切換與返回 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 2.5rem 0; flex-wrap: wrap; gap: 1rem;">
+      <a href="quiz-01-q04.html" class="nav-link" style="padding: 0.6rem 1.2rem;">← 上一題</a>
+      <a href="quiz-01-ai-basic.html" class="btn-back-home" style="margin-bottom: 0;">📑 完整清單模式 (全50題)</a>
+      <a href="quiz-01-q06.html" class="nav-link" style="padding: 0.6rem 1.2rem;">下一題 →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>iPAS AI 應用規劃師互動題庫專案 &copy; 2026. 專為高效率通過認證設計。</p>
+  </footer>
+
+  <script>
+    function toggleAnswer(qid, correctAns) {
+      const expPanel = document.getElementById('exp-' + qid);
+      const optsList = document.getElementById('opts-' + qid);
+      const btn = event.currentTarget;
+      
+      const isShowing = expPanel.classList.toggle('show');
+      
+      const options = optsList.querySelectorAll('.option-item');
+      options.forEach(opt => {
+        if (opt.getAttribute('data-opt') === correctAns) {
+          if (isShowing) {
+            opt.classList.add('correct');
+          } else {
+            opt.classList.remove('correct');
+          }
+        }
+      });
+
+      if (isShowing) {
+        btn.innerHTML = '隱藏答案與解析';
+        btn.classList.add('active');
+      } else {
+        btn.innerHTML = '💡 顯示答案與詳細解析';
+        btn.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>

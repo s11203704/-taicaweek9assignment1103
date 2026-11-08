@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第 13 題 - 114年第四次 AI應用規劃師【第一科：人工智慧基礎概論】</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- 頂部導覽列 (Navbar) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span>⚡</span> iPAS AI 互動題庫
+      </a>
+      <div style="display: flex; gap: 0.5rem;">
+        <a href="quiz-01-ai-basic.html" class="nav-link">📋 查看全部50題</a>
+        <a href="../index.html" class="nav-link">← 返回題庫首頁</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 單元標題 (Hero Section) -->
+  <section class="hero">
+    <div class="hero-container">
+      <span class="badge">人工智慧基礎概論 ‧ 單題精準複習</span>
+      <h1>第 13 題 / 共 50 題</h1>
+      <p>114 年第四次 AI 應用規劃師 初級能力鑑定 公告試題</p>
+    </div>
+  </section>
+
+  <!-- 主考題互動區 -->
+  <main class="container">
+    <article class="question-card" id="q13">
+      <div class="question-header">
+        <span class="q-badge">第 13 題</span>
+        <h2 class="q-title">下列哪一項應用情境與機器學習類型搭配正確？</h2>
+      </div>
+      <ul class="options-list" id="opts-13">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">在醫療影像資料中，僅有少部分影像有專家標註診斷，其餘大多數影像未標註，研究者結合已標註與未標註資料來建立模型 — 監督式學習（Supervised Learning）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">在自駕車模擬環境中，模型透過試駕獲得「是否安全通過路口」的獎勵或懲罰訊號，逐步調整決策策略 — 非監督式學習（UnsupervisedLearning）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">在顧客購買紀錄中，利用已知的「顧客是否流失」標籤，訓練模型以 預 測 新 顧 客 未 來 是 否 會 流 失 — 強 化 式 學 習 （ ReinforcementLearning）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">在股票市場資料中，輸入歷史股價序列，嘗試將未來可能走勢劃分成若干「上升型、盤整型、下降型」群組，無需使用任何標籤 — 非監督式學習（Unsupervised Learning）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('13', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-13">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          (D) 無需任何標籤將走勢劃分成不同群組屬於典型的「非監督式學習（分群）」；(A) 有標籤結合未標註應為半監督學習；(B) 獎勵/懲罰訊號應為強化學習；(C) 具備明確標籤訓練應為監督式學習。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：機器學習四大典範</div>
+          <p>監督式 (有標籤)、非監督式 (無標籤分群降維)、半監督式 (少標籤多未標)、強化學習 (環境回饋獎懲)。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 單題翻頁切換與返回 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 2.5rem 0; flex-wrap: wrap; gap: 1rem;">
+      <a href="quiz-01-q12.html" class="nav-link" style="padding: 0.6rem 1.2rem;">← 上一題</a>
+      <a href="quiz-01-ai-basic.html" class="btn-back-home" style="margin-bottom: 0;">📑 完整清單模式 (全50題)</a>
+      <a href="quiz-01-q14.html" class="nav-link" style="padding: 0.6rem 1.2rem;">下一題 →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>iPAS AI 應用規劃師互動題庫專案 &copy; 2026. 專為高效率通過認證設計。</p>
+  </footer>
+
+  <script>
+    function toggleAnswer(qid, correctAns) {
+      const expPanel = document.getElementById('exp-' + qid);
+      const optsList = document.getElementById('opts-' + qid);
+      const btn = event.currentTarget;
+      
+      const isShowing = expPanel.classList.toggle('show');
+      
+      const options = optsList.querySelectorAll('.option-item');
+      options.forEach(opt => {
+        if (opt.getAttribute('data-opt') === correctAns) {
+          if (isShowing) {
+            opt.classList.add('correct');
+          } else {
+            opt.classList.remove('correct');
+          }
+        }
+      });
+
+      if (isShowing) {
+        btn.innerHTML = '隱藏答案與解析';
+        btn.classList.add('active');
+      } else {
+        btn.innerHTML = '💡 顯示答案與詳細解析';
+        btn.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>

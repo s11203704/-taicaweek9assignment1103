@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第 44 題 - 114年第四次 AI應用規劃師【第一科：人工智慧基礎概論】</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- 頂部導覽列 (Navbar) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span>⚡</span> iPAS AI 互動題庫
+      </a>
+      <div style="display: flex; gap: 0.5rem;">
+        <a href="quiz-01-ai-basic.html" class="nav-link">📋 查看全部50題</a>
+        <a href="../index.html" class="nav-link">← 返回題庫首頁</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 單元標題 (Hero Section) -->
+  <section class="hero">
+    <div class="hero-container">
+      <span class="badge">人工智慧基礎概論 ‧ 單題精準複習</span>
+      <h1>第 44 題 / 共 50 題</h1>
+      <p>114 年第四次 AI 應用規劃師 初級能力鑑定 公告試題</p>
+    </div>
+  </section>
+
+  <!-- 主考題互動區 -->
+  <main class="container">
+    <article class="question-card" id="q44">
+      <div class="question-header">
+        <span class="q-badge">第 44 題</span>
+        <h2 class="q-title">在機器學習中，「叢集（Clustering）」方法最典型的應用情境是下列何者？</h2>
+      </div>
+      <ul class="options-list" id="opts-44">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">根據歷史交易紀錄與已標註的詐欺案例，訓練模型來偵測未來的詐欺交易</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">使用醫療數據與病患的診斷標籤，建立模型以預測病人是否罹患特定疾病</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">根據顧客的消費行為與特徵，將顧客自動劃分為數個群組，以便進行差異化行銷</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">透過大量已標註影像，訓練深度學習模型來辨識照片中的物件種類</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('44', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-44">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          「叢集（分群，Clustering）」是非監督式學習的代表，用於將無標籤的樣本依相似度劃分成多個群體。在商業中，依據顧客消費特徵自動分群以進行客製化分眾行銷，是最具代表性的應用情境。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：叢集分析典型應用：客群劃分</div>
+          <p>無標籤資料透過相似度度量（如歐氏距離）凝聚為群，實現差異化分眾策略。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 單題翻頁切換與返回 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 2.5rem 0; flex-wrap: wrap; gap: 1rem;">
+      <a href="quiz-01-q43.html" class="nav-link" style="padding: 0.6rem 1.2rem;">← 上一題</a>
+      <a href="quiz-01-ai-basic.html" class="btn-back-home" style="margin-bottom: 0;">📑 完整清單模式 (全50題)</a>
+      <a href="quiz-01-q45.html" class="nav-link" style="padding: 0.6rem 1.2rem;">下一題 →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>iPAS AI 應用規劃師互動題庫專案 &copy; 2026. 專為高效率通過認證設計。</p>
+  </footer>
+
+  <script>
+    function toggleAnswer(qid, correctAns) {
+      const expPanel = document.getElementById('exp-' + qid);
+      const optsList = document.getElementById('opts-' + qid);
+      const btn = event.currentTarget;
+      
+      const isShowing = expPanel.classList.toggle('show');
+      
+      const options = optsList.querySelectorAll('.option-item');
+      options.forEach(opt => {
+        if (opt.getAttribute('data-opt') === correctAns) {
+          if (isShowing) {
+            opt.classList.add('correct');
+          } else {
+            opt.classList.remove('correct');
+          }
+        }
+      });
+
+      if (isShowing) {
+        btn.innerHTML = '隱藏答案與解析';
+        btn.classList.add('active');
+      } else {
+        btn.innerHTML = '💡 顯示答案與詳細解析';
+        btn.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>

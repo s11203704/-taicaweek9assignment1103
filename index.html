@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPAS AI 應用規劃師 精選考題與核心觀念互動題庫</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* 首頁專屬微調 */
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .stat-card {
+      background: #ffffff;
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--secondary-color);
+      margin-bottom: 0.25rem;
+    }
+    .stat-label {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .question-quick-nav {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      margin-top: 2rem;
+    }
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background-color: #f1f5f9;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+    .nav-pill:hover {
+      background-color: var(--secondary-color);
+      color: #ffffff;
+      border-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <!-- 頂部導覽列 (Navbar) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <span>⚡</span> iPAS AI 互動題庫
+      </a>
+      <div>
+        <a href="#quiz-list" class="nav-link">📚 題庫單元清單</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 單元標題 (Hero Section) -->
+  <section class="hero">
+    <div class="hero-container">
+      <span class="badge">經濟部產業人才能力鑑定 (iPAS)</span>
+      <h1>iPAS AI 應用規劃師 精選考題與核心觀念互動題庫</h1>
+      <p>專為考生量身打造的高效刷題神器。整合歷屆精選公告試題、互動點擊遮色即時解鎖答案、深入關鍵考點解析與記憶小卡，助你穩健掌握 AI 核心能力！</p>
+    </div>
+  </section>
+
+  <!-- 主內容區 -->
+  <main class="container">
+    <!-- 統計概覽 -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-number">50 題</div>
+        <div class="stat-label">已收錄公告試題</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">繁體中文專業解析與小卡</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">即時互動</div>
+        <div class="stat-label">遮蔽答案與點擊滑順展開</div>
+      </div>
+    </div>
+
+    <!-- 考題單元索引區 -->
+    <h2 class="section-title">
+      <span>📖</span> 考題單元索引區
+    </h2>
+
+    <!-- AGENTS.md 規定之 quiz-list 清單 -->
+    <ul id="quiz-list" class="quiz-grid">
+      <!-- 最新考題單元卡片（依鐵律新增於最上方） -->
+      <li>
+        <a href="questions/quiz-01-ai-basic.html" class="quiz-card-link">
+          <div class="quiz-entry-card">
+            <span class="quiz-entry-tag">🔥 最新收錄 ‧ 50題全解</span>
+            <h3 class="quiz-entry-title">114年第四次 AI應用規劃師 - 人工智慧基礎概論</h3>
+            <p class="quiz-entry-desc">
+              收錄 114 年 11 月最新公告試題（共 50 題）。涵蓋特徵工程（L1/L2、交叉特徵）、機器學習理論（KNN、貝氏、RNN、VAE）、XAI 可解釋性（LIME、反事實）、AI 基本法與監理沙盒等完整詳解。
+            </p>
+            <div class="quiz-entry-footer">
+              <span>共 50 題 ‧ 完整題庫檢視</span>
+              <span>進入練習 →</span>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <!-- 快速單題跳轉區 (一題一頁) -->
+    <div class="question-quick-nav">
+      <h3 style="font-size: 1.1rem; color: var(--primary-color); font-weight: 700;">
+        🎯 單題精準複習（一題一頁模式）：
+      </h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.25rem;">
+        點擊下方題號可直接進入單題專注練習頁面，適合通勤與破碎化時間複習：
+      </p>
+      <div class="nav-pills">
+        <!-- 題號 1 ~ 50 跳轉按鈕 -->
+        <a href="questions/quiz-01-q01.html" class="nav-pill" title="第 1 題">1</a>
+        <a href="questions/quiz-01-q02.html" class="nav-pill" title="第 2 題">2</a>
+        <a href="questions/quiz-01-q03.html" class="nav-pill" title="第 3 題">3</a>
+        <a href="questions/quiz-01-q04.html" class="nav-pill" title="第 4 題">4</a>
+        <a href="questions/quiz-01-q05.html" class="nav-pill" title="第 5 題">5</a>
+        <a href="questions/quiz-01-q06.html" class="nav-pill" title="第 6 題">6</a>
+        <a href="questions/quiz-01-q07.html" class="nav-pill" title="第 7 題">7</a>
+        <a href="questions/quiz-01-q08.html" class="nav-pill" title="第 8 題">8</a>
+        <a href="questions/quiz-01-q09.html" class="nav-pill" title="第 9 題">9</a>
+        <a href="questions/quiz-01-q10.html" class="nav-pill" title="第 10 題">10</a>
+        <a href="questions/quiz-01-q11.html" class="nav-pill" title="第 11 題">11</a>
+        <a href="questions/quiz-01-q12.html" class="nav-pill" title="第 12 題">12</a>
+        <a href="questions/quiz-01-q13.html" class="nav-pill" title="第 13 題">13</a>
+        <a href="questions/quiz-01-q14.html" class="nav-pill" title="第 14 題">14</a>
+        <a href="questions/quiz-01-q15.html" class="nav-pill" title="第 15 題">15</a>
+        <a href="questions/quiz-01-q16.html" class="nav-pill" title="第 16 題">16</a>
+        <a href="questions/quiz-01-q17.html" class="nav-pill" title="第 17 題">17</a>
+        <a href="questions/quiz-01-q18.html" class="nav-pill" title="第 18 題">18</a>
+        <a href="questions/quiz-01-q19.html" class="nav-pill" title="第 19 題">19</a>
+        <a href="questions/quiz-01-q20.html" class="nav-pill" title="第 20 題">20</a>
+        <a href="questions/quiz-01-q21.html" class="nav-pill" title="第 21 題">21</a>
+        <a href="questions/quiz-01-q22.html" class="nav-pill" title="第 22 題">22</a>
+        <a href="questions/quiz-01-q23.html" class="nav-pill" title="第 23 題">23</a>
+        <a href="questions/quiz-01-q24.html" class="nav-pill" title="第 24 題">24</a>
+        <a href="questions/quiz-01-q25.html" class="nav-pill" title="第 25 題">25</a>
+        <a href="questions/quiz-01-q26.html" class="nav-pill" title="第 26 題">26</a>
+        <a href="questions/quiz-01-q27.html" class="nav-pill" title="第 27 題">27</a>
+        <a href="questions/quiz-01-q28.html" class="nav-pill" title="第 28 題">28</a>
+        <a href="questions/quiz-01-q29.html" class="nav-pill" title="第 29 題">29</a>
+        <a href="questions/quiz-01-q30.html" class="nav-pill" title="第 30 題">30</a>
+        <a href="questions/quiz-01-q31.html" class="nav-pill" title="第 31 題">31</a>
+        <a href="questions/quiz-01-q32.html" class="nav-pill" title="第 32 題">32</a>
+        <a href="questions/quiz-01-q33.html" class="nav-pill" title="第 33 題">33</a>
+        <a href="questions/quiz-01-q34.html" class="nav-pill" title="第 34 題">34</a>
+        <a href="questions/quiz-01-q35.html" class="nav-pill" title="第 35 題">35</a>
+        <a href="questions/quiz-01-q36.html" class="nav-pill" title="第 36 題">36</a>
+        <a href="questions/quiz-01-q37.html" class="nav-pill" title="第 37 題">37</a>
+        <a href="questions/quiz-01-q38.html" class="nav-pill" title="第 38 題">38</a>
+        <a href="questions/quiz-01-q39.html" class="nav-pill" title="第 39 題">39</a>
+        <a href="questions/quiz-01-q40.html" class="nav-pill" title="第 40 題">40</a>
+        <a href="questions/quiz-01-q41.html" class="nav-pill" title="第 41 題">41</a>
+        <a href="questions/quiz-01-q42.html" class="nav-pill" title="第 42 題">42</a>
+        <a href="questions/quiz-01-q43.html" class="nav-pill" title="第 43 題">43</a>
+        <a href="questions/quiz-01-q44.html" class="nav-pill" title="第 44 題">44</a>
+        <a href="questions/quiz-01-q45.html" class="nav-pill" title="第 45 題">45</a>
+        <a href="questions/quiz-01-q46.html" class="nav-pill" title="第 46 題">46</a>
+        <a href="questions/quiz-01-q47.html" class="nav-pill" title="第 47 題">47</a>
+        <a href="questions/quiz-01-q48.html" class="nav-pill" title="第 48 題">48</a>
+        <a href="questions/quiz-01-q49.html" class="nav-pill" title="第 49 題">49</a>
+        <a href="questions/quiz-01-q50.html" class="nav-pill" title="第 50 題">50</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- 底部導覽 (Footer) -->
+  <footer class="footer">
+    <p>iPAS AI 應用規劃師互動題庫專案 &copy; 2026. 嚴格遵循 AGENTS.md 規範建置。</p>
+  </footer>
+</body>
+</html>

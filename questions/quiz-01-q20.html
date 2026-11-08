@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第 20 題 - 114年第四次 AI應用規劃師【第一科：人工智慧基礎概論】</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- 頂部導覽列 (Navbar) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span>⚡</span> iPAS AI 互動題庫
+      </a>
+      <div style="display: flex; gap: 0.5rem;">
+        <a href="quiz-01-ai-basic.html" class="nav-link">📋 查看全部50題</a>
+        <a href="../index.html" class="nav-link">← 返回題庫首頁</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 單元標題 (Hero Section) -->
+  <section class="hero">
+    <div class="hero-container">
+      <span class="badge">人工智慧基礎概論 ‧ 單題精準複習</span>
+      <h1>第 20 題 / 共 50 題</h1>
+      <p>114 年第四次 AI 應用規劃師 初級能力鑑定 公告試題</p>
+    </div>
+  </section>
+
+  <!-- 主考題互動區 -->
+  <main class="container">
+    <article class="question-card" id="q20">
+      <div class="question-header">
+        <span class="q-badge">第 20 題</span>
+        <h2 class="q-title">某醫院希望開發一個系統，根據患者的年齡、血壓與 BMI 等資訊，預測其罹患糖尿病的機率（0~1），並依據預測值是否超過 0.5 做出風險警示。下列哪一種模型最適合用於此分類任務？</h2>
+      </div>
+      <ul class="options-list" id="opts-20">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">邏輯迴歸（Logistic Regression）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">支援向量機（Support Vector Machine）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">決策樹（Decision Tree）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">K 平均演算法（K-means）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('20', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-20">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          任務需求是輸出罹患疾病的「機率值（0~1）」，並以 0.5 為閾值做警示，這正是邏輯迴歸（Logistic Regression）使用 Sigmoid 函數輸出後驗機率的經典應用情境。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：邏輯迴歸 (Logistic Regression)</div>
+          <p>透過 Sigmoid 函數將線性組合映射為 0~1 的機率值，最常用於二元分類與機率風險評估。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 單題翻頁切換與返回 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 2.5rem 0; flex-wrap: wrap; gap: 1rem;">
+      <a href="quiz-01-q19.html" class="nav-link" style="padding: 0.6rem 1.2rem;">← 上一題</a>
+      <a href="quiz-01-ai-basic.html" class="btn-back-home" style="margin-bottom: 0;">📑 完整清單模式 (全50題)</a>
+      <a href="quiz-01-q21.html" class="nav-link" style="padding: 0.6rem 1.2rem;">下一題 →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>iPAS AI 應用規劃師互動題庫專案 &copy; 2026. 專為高效率通過認證設計。</p>
+  </footer>
+
+  <script>
+    function toggleAnswer(qid, correctAns) {
+      const expPanel = document.getElementById('exp-' + qid);
+      const optsList = document.getElementById('opts-' + qid);
+      const btn = event.currentTarget;
+      
+      const isShowing = expPanel.classList.toggle('show');
+      
+      const options = optsList.querySelectorAll('.option-item');
+      options.forEach(opt => {
+        if (opt.getAttribute('data-opt') === correctAns) {
+          if (isShowing) {
+            opt.classList.add('correct');
+          } else {
+            opt.classList.remove('correct');
+          }
+        }
+      });
+
+      if (isShowing) {
+        btn.innerHTML = '隱藏答案與解析';
+        btn.classList.add('active');
+      } else {
+        btn.innerHTML = '💡 顯示答案與詳細解析';
+        btn.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>

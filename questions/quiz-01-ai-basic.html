@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>114年第四次 AI應用規劃師 - 人工智慧基礎概論 | 互動題庫</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- 頂部導覽列 (Navbar) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span>⚡</span> iPAS AI 互動題庫
+      </a>
+      <a href="../index.html" class="nav-link">
+        ← 返回題庫首頁
+      </a>
+    </div>
+  </header>
+
+  <!-- 單元標題 (Hero Section) -->
+  <section class="hero">
+    <div class="hero-container">
+      <span class="badge">iPAS 考題類別：人工智慧基礎概論</span>
+      <h1>114年第四次 初級能力鑑定【第一科精選50題】</h1>
+      <p>涵蓋機器學習、深度學習、特徵工程、XAI、AI 治理法規與生成式 AI 核心考點。點擊按鈕即可即時檢視解析與考點小卡。</p>
+    </div>
+  </section>
+
+  <!-- 主考題互動區 -->
+  <main class="container">
+
+    <!-- 第 1 題 -->
+    <article class="question-card" id="q1">
+      <div class="question-header">
+        <span class="q-badge">第 1 題</span>
+        <h2 class="q-title">在人工智慧系統的決策流程中，下列哪一種情境最符合「人在迴圈上（Human-over-the-loop）」所強調的監督機制？</h2>
+      </div>
+      <ul class="options-list" id="opts-1">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">AI 系統只能提供建議，人類需主動下達命令才能進行決策</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">人類對 AI 的運行進行日常監督，必要時可立即介入修正或干預</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">人類平時不參與 AI 的運作，僅在發生異常或重大錯誤時才接手控制</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">AI 的所有判斷與行動在執行前，皆須經過人類逐一審核與批准</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('1', 'B')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-1">
+        <div class="ans-summary">【正確答案】：(B)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          「人在迴圈上（Human-over-the-loop）」代表 AI 系統具備自主運行與決策能力，人類擔任監控者角色，在平時進行日常監督，僅在必要或異常時立即介入干預或終止。「人在迴圈內（Human-in-the-loop）」則是每一步決策皆須人類核准；「人在迴圈外（Human-out-of-the-loop）」則是 AI 完全自主，人類完全不參與。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：AI 監督機制三層級</div>
+          <p>In-the-loop (人類每步核准) ➔ Over-the-loop (AI自主運行、人類監控介入) ➔ Out-of-the-loop (全自動、人類不干預)。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 2 題 -->
+    <article class="question-card" id="q2">
+      <div class="question-header">
+        <span class="q-badge">第 2 題</span>
+        <h2 class="q-title">下列哪一種特徵工程技巧，最適合將「星期幾」和「24 小時制時間」這兩個欄位結合，以預測通勤時間？</h2>
+      </div>
+      <ul class="options-list" id="opts-2">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">One-hot 編碼（One-hot encoding）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">正規化（Normalization）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">特徵交叉（Feature Cross）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">寬深模型（Wide and Deep）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('2', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-2">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          「特徵交叉（Feature Cross）」是指將兩個或多個特徵組合相乘或聯立，產生非線性特徵。例如將「星期幾（週一至週日）」與「時間（尖峰/離峰）」交叉組合成特定時段特徵，最能有效捕捉通勤流量的週期與交互作用。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：特徵工程：特徵交叉</div>
+          <p>特徵交叉能捕捉多維度變數間的非線性交互關係，特別適合週期性時間與類別的結合分析。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 3 題 -->
+    <article class="question-card" id="q3">
+      <div class="question-header">
+        <span class="q-badge">第 3 題</span>
+        <h2 class="q-title">關於 ETL（Extract-Transform-Load），下列敘述何者為正確？</h2>
+      </div>
+      <ul class="options-list" id="opts-3">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">E 表示將資料直接儲存至目標儲存庫</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">ETL 的處理順序可以自由調整為 TEL</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">L 表示將目標儲存庫經過反加密處理載入資料</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">T 包括資料的清理與排序</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('3', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-3">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          ETL 為 Extract（擷取）、Transform（轉換）、Load（載入）。其中 T（轉換）包含資料清理、去除雜訊、排序、彙總、格式轉換等，因此 (D) 正確。(A) 儲存至目標庫是 Load；(B) 順序不可隨意顛倒；(C) L 為資料載入，與反加密無直接必然關聯。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：資料工程核心流程 ETL</div>
+          <p>Extract (資料擷取) ➔ Transform (資料清理、排序、格式轉換) ➔ Load (載入資料倉儲)。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 4 題 -->
+    <article class="question-card" id="q4">
+      <div class="question-header">
+        <span class="q-badge">第 4 題</span>
+        <h2 class="q-title">關於資料正則化（Regularization）L1、L2 方法，下列敘述何者正確？</h2>
+      </div>
+      <ul class="options-list" id="opts-4">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">L1 權重個數愈多，愈可以提升模型的正確率</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">L2 稱為 Lasso 正則化</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">L1 運用減少權重的絕對值來控制模型的複雜度</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">L2 較 L1 正則化方法會將特徵權重趨近於零</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('4', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-4">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          L1 正則化（Lasso）在損失函數加入權重絕對值之和（|w|），會迫使不重要的特徵權重收斂至恰好為 0，達到稀疏化與特徵選取效果；L2 正則化（Ridge）是加入權重平方和，只會使權重趨近於 0 但不為 0。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：L1 (Lasso) vs L2 (Ridge) 正則化</div>
+          <p>L1：權重絕對值和，能產生稀疏解（係數歸零，可做特徵篩選）。L2：權重平方和，權重趨近零但不等於零。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 5 題 -->
+    <article class="question-card" id="q5">
+      <div class="question-header">
+        <span class="q-badge">第 5 題</span>
+        <h2 class="q-title">在機器學習中，「偏差與變異權衡（Bias-Variance Tradeoff）」主要用來解決下列哪一類型的問題？</h2>
+      </div>
+      <ul class="options-list" id="opts-5">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">因資料來源或收集方式限制，導致模型學習到的資訊不足</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">測試資料樣本與訓練資料高度重複，造成模型泛化能力評估失準</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">訓練資料中類別分布不均，使模型在少數類別上表現不佳</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">如何在模型偏差與變異之間取得平衡，以避免過度擬合或欠擬合</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('5', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-5">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          「偏差與變異權衡（Bias-Variance Tradeoff）」是機器學習的核心課題：高偏差通常對應模型過度簡化導致的「欠擬合（Underfitting）」，高變異則對應模型對訓練資料過度敏感所造成的「過度擬合（Overfitting）」，目標是取得兩者平衡以最大化泛化能力。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：偏差與變異權衡 (Bias-Variance Tradeoff)</div>
+          <p>高偏差 ➔ 欠擬合 (Underfitting)；高變異 ➔ 過度擬合 (Overfitting)；兩者權衡能使泛化誤差最小化。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 6 題 -->
+    <article class="question-card" id="q6">
+      <div class="question-header">
+        <span class="q-badge">第 6 題</span>
+        <h2 class="q-title">在 Lasso 模型中，L1 正則化（Regularization）導致參數收斂為零的原因為何？</h2>
+      </div>
+      <ul class="options-list" id="opts-6">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">L1 正則化忽略目標變數</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">L1 對梯度有平滑作用</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">L1 對大係數懲罰較強，促使稀疏解</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">L1 會轉換損失函數為非凸形</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('6', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-6">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          L1 正則化的幾何約束面為帶有尖角的多胞體（菱形），等高線極容易在座標軸尖點相交，因此其對大係數施加常數懲罰，驅使非關鍵權重收斂為 0，形成稀疏解（Sparse Solution）。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：L1 正則化產生稀疏解</div>
+          <p>幾何菱形邊界與非平滑絕對值懲罰，使得特徵係數易於精確落於 0，具備特徵選取效果。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 7 題 -->
+    <article class="question-card" id="q7">
+      <div class="question-header">
+        <span class="q-badge">第 7 題</span>
+        <h2 class="q-title">貝氏分類器（Naive Bayes Classifier）常被應用於文字分類、垃圾郵件過濾等場景。依據模型特性，它最適合歸類於下列哪一類？</h2>
+      </div>
+      <ul class="options-list" id="opts-7">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">透過直接學習輸入特徵與目標標籤之間的邊界或關係來進行分類的模型</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">透過建構資料的整體分布，並利用條件關係進行推斷和分類的模型</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">側重探索資料中樣本間的相似性，將資料自動分成不同群組的模型</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">透過試錯學習，根據行動結果的獎勵或懲罰來優化決策策略的模型</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('7', 'B')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-7">
+        <div class="ans-summary">【正確答案】：(B)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          貝氏分類器屬於「生成式模型（Generative Model）」，其透過貝氏定理建立特徵與標籤的聯合機率分布 P(X, Y) 或先驗機率與條件機率，利用整體機率分布進行推斷分類。直接學習決策邊界的為判別式模型（如 SVM、Logistic Regression）。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：生成模型 vs 判別模型</div>
+          <p>生成式模型（如 Naive Bayes、HMM）學習聯合分布 P(X,Y)；判別式模型（如 SVM、決策樹）直接學習邊界 P(Y|X)。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 8 題 -->
+    <article class="question-card" id="q8">
+      <div class="question-header">
+        <span class="q-badge">第 8 題</span>
+        <h2 class="q-title">為提升生成式 AI 系統回應的語境一致性，常會結合哪類模型技術？</h2>
+      </div>
+      <ul class="options-list" id="opts-8">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">決策樹分類器（Decision Tree Classifier）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">條件語言模型（Conditional Language Model）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">強化學習 Q-learning 函數模型</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">基因演算法（Genetic Algorithm）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('8', 'B')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-8">
+        <div class="ans-summary">【正確答案】：(B)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          條件語言模型（Conditional Language Model）根據給定的上下文/條件提示詞（Prompt）計算下一個字詞出現的機率分布，從而保證回應與給定語境維持高度一致性與關聯性。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：條件語言模型 (Conditional LM)</div>
+          <p>在給定特定條件脈絡（Context/Condition）下生成文字，確保回應內容前後連貫與符合語境。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 9 題 -->
+    <article class="question-card" id="q9">
+      <div class="question-header">
+        <span class="q-badge">第 9 題</span>
+        <h2 class="q-title">根據 2025 年 9 月行政院通過之《人工智慧基本法》草案，政府推動人工智慧之「創新實驗環境」制度，主要參考歐盟的何種制度？</h2>
+      </div>
+      <ul class="options-list" id="opts-9">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">Data Protection Impact Assessment</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">Regulatory Sandbox</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">AI Trust Label</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">AI Ethics Review Board</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('9', 'B')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-9">
+        <div class="ans-summary">【正確答案】：(B)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          行政院通過之《人工智慧基本法》草案規劃「創新實驗環境」，借鏡自歐盟及各國金融與科技監管的「監理沙盒（Regulatory Sandbox）」制度，提供彈性且風險受控的實證測試空間。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：創新實驗環境：監理沙盒</div>
+          <p>Regulatory Sandbox (監理沙盒) 提供受控環境進行新技術實證，平衡創新發展與風險控管。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 10 題 -->
+    <article class="question-card" id="q10">
+      <div class="question-header">
+        <span class="q-badge">第 10 題</span>
+        <h2 class="q-title">根據《金融機構運用人工智慧技術作業規範》，金融機構須建立內部治理架構，並指定專責單位或人員負責推動及管理人工智慧事務，下列何者並非規範所明訂須落實的治理措施？</h2>
+      </div>
+      <ul class="options-list" id="opts-10">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">辦理人工智慧人才培育</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">清楚了解生成式 AI 技術之運作模式</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">每日公布人工智慧系統運作狀況</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">指派高階主管或委員會進行監督管理</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('10', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-10">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          《金融機構運用人工智慧技術作業規範》明訂須辦理人才培育、高階主管監督、了解生成式 AI 技術風險等，並無要求「每日公布運作狀況」這種不具實務效益的繁重行政措施。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：金融 AI 治理重點</div>
+          <p>著重人才培育、內部治理架構、高階主管監督與風險控制，而非無實質意義的每日公布日誌。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 11 題 -->
+    <article class="question-card" id="q11">
+      <div class="question-header">
+        <span class="q-badge">第 11 題</span>
+        <h2 class="q-title">下列哪一類問題最適合使用非監督式學習（Unsupervised Learning）來處理？</h2>
+      </div>
+      <ul class="options-list" id="opts-11">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">根據已標記的醫療影像訓練模型診斷疾病</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">根據使用者行為將用戶分群，以優化行銷策略</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">透過已知交通事故記錄預測未來事故發生機率</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">根據歷史股價預測未來股市的走勢</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('11', 'B')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-11">
+        <div class="ans-summary">【正確答案】：(B)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          非監督式學習（Unsupervised Learning）不需要任何標籤資料，主要用於探索資料內在結構。常見應用即為「分群（Clustering）」，如根據用戶行為進行客群分群以優化行銷策略。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：非監督式學習應用：用戶分群</div>
+          <p>無標籤資料的分群（K-Means、DBSCAN）、降維（PCA）是典型的非監督式學習任務。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 12 題 -->
+    <article class="question-card" id="q12">
+      <div class="question-header">
+        <span class="q-badge">第 12 題</span>
+        <h2 class="q-title">下列哪一種圖表最適合用來呈現並分析「兩個數值型變數」之間的關係，例如觀察身高與體重的相關性？</h2>
+      </div>
+      <ul class="options-list" id="opts-12">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">散佈圖（Scatter Plot）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">折線圖（Line Chart）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">直方圖（Histogram）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">長條圖（Bar Chart）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('12', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-12">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          散佈圖（Scatter Plot）專門用於視覺化與分析兩個連續數值型變數之間的關係與相關趨勢（如身高 vs 體重）；直方圖適用單變數連續分布；長條圖適用類別頻率；折線圖適用時間序列趨勢。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：資料視覺化圖表選擇</div>
+          <p>兩個連續變數相關性 ➔ 散佈圖 (Scatter Plot)；單變數分佈 ➔ 直方圖 (Histogram)。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 13 題 -->
+    <article class="question-card" id="q13">
+      <div class="question-header">
+        <span class="q-badge">第 13 題</span>
+        <h2 class="q-title">下列哪一項應用情境與機器學習類型搭配正確？</h2>
+      </div>
+      <ul class="options-list" id="opts-13">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">在醫療影像資料中，僅有少部分影像有專家標註診斷，其餘大多數影像未標註，研究者結合已標註與未標註資料來建立模型 — 監督式學習（Supervised Learning）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">在自駕車模擬環境中，模型透過試駕獲得「是否安全通過路口」的獎勵或懲罰訊號，逐步調整決策策略 — 非監督式學習（UnsupervisedLearning）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">在顧客購買紀錄中，利用已知的「顧客是否流失」標籤，訓練模型以 預 測 新 顧 客 未 來 是 否 會 流 失 — 強 化 式 學 習 （ ReinforcementLearning）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">在股票市場資料中，輸入歷史股價序列，嘗試將未來可能走勢劃分成若干「上升型、盤整型、下降型」群組，無需使用任何標籤 — 非監督式學習（Unsupervised Learning）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('13', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-13">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          (D) 無需任何標籤將走勢劃分成不同群組屬於典型的「非監督式學習（分群）」；(A) 有標籤結合未標註應為半監督學習；(B) 獎勵/懲罰訊號應為強化學習；(C) 具備明確標籤訓練應為監督式學習。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：機器學習四大典範</div>
+          <p>監督式 (有標籤)、非監督式 (無標籤分群降維)、半監督式 (少標籤多未標)、強化學習 (環境回饋獎懲)。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 14 題 -->
+    <article class="question-card" id="q14">
+      <div class="question-header">
+        <span class="q-badge">第 14 題</span>
+        <h2 class="q-title">某企業分析團隊正在處理一組近兩年的營運與銷售數據，共有四個部門 提 出 了 各 自 的 分 析 需 求 ， 請 判 斷 哪 一 個 最 接 近 「 預 測 性 分 析（Predictive Analysis）」的特性？</h2>
+      </div>
+      <ul class="options-list" id="opts-14">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">視覺化所有產品線過去月銷售走勢與標準差，觀察其分佈情況與波動程度</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">藉由資料比對分析，找出去年母親節促銷失效的地區與品類組合</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">建構模型推算下一季的主力商品銷量，以規劃備貨與倉儲資源配置</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">透過熱圖分析廣告投放成本與訂單轉換率之間的潛在關聯性</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('14', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-14">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          預測性分析（Predictive Analysis）的核心在於運用歷史資料建構模型，預估未來可能發生的情況（如推算下一季主力商品銷量）；(A) 為描述性分析；(B) 為診斷性分析；(D) 為關聯探索。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：數據分析四層次</div>
+          <p>描述性 (發生了什麼) ➔ 診斷性 (為什麼發生) ➔ 預測性 (將會發生什麼) ➔ 處方性 (如何應對)。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 15 題 -->
+    <article class="question-card" id="q15">
+      <div class="question-header">
+        <span class="q-badge">第 15 題</span>
+        <h2 class="q-title">某模型使用 K-近鄰演算法（KNN）進行分類，K 設為 3。 一筆新的測試資料輸入後，與其最接近的 3 筆資料的類別如下：鄰近樣本 1：類別A；鄰近樣本 2：類別 B；鄰近樣本 3：類別 A。請問模型會將這筆資料預測為哪一類別？</h2>
+      </div>
+      <ul class="options-list" id="opts-15">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">類別 A</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">類別 B</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">類別 A 與 B 各一半，無法分類</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">類別 A 或 B，視距離遠近加權而定</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('15', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-15">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          K-NN 在 K=3 時，統計 3 個最近鄰居中各類別的得票數。鄰近樣本 1 為 A，樣本 2 為 B，樣本 3 為 A。類別 A 獲得 2 票，類別 B 獲得 1 票，多數決結果預測為類別 A。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：K-近鄰演算法 (KNN) 多數決</div>
+          <p>找出空間中最近的 K 個鄰居，以出現次數最多的類別（Majority Voting）作為預測輸出。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 16 題 -->
+    <article class="question-card" id="q16">
+      <div class="question-header">
+        <span class="q-badge">第 16 題</span>
+        <h2 class="q-title">某團隊想採用循環神經網路（Recurrent Neural Network, RNN）建構長期氣候數據的預測模型，以下哪一項敘述最符合使用 RNN 可能會遇到的挑戰？</h2>
+      </div>
+      <ul class="options-list" id="opts-16">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">RNN 無法處理可變長度的序列輸入，因此在實務上限制極大</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">RNN 在長序列訓練中可能出現梯度消失，影響模型效果</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">RNN 無法捕捉時間上的依賴關係，因此預測準確度低</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">RNN 只能用於分類任務，不能應用於時間序列預測</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('16', 'B')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-16">
+        <div class="ans-summary">【正確答案】：(B)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          RNN 因時間維度反向傳播（BPTT），當序列長度過長時，梯度連續相乘容易發生「梯度消失（Vanishing Gradient）」或梯度爆炸，難以捕捉長期依賴關係，這也是後來 LSTM、GRU 及 Transformer 提出的主要動機。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：RNN 核心挑戰：梯度消失</div>
+          <p>傳統 RNN 無法有效記憶長期時間資訊，因反向傳播在長序列上容易造成梯度消失。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 17 題 -->
+    <article class="question-card" id="q17">
+      <div class="question-header">
+        <span class="q-badge">第 17 題</span>
+        <h2 class="q-title">一間金融科技公司設計一款智慧投資系統，該系統會根據市場變化自動決定「買進」、「持有」或「賣出」的行動，並根據每次交易後的盈虧結果，逐步優化下一次的投資策略。整個過程中，系統不依賴事先標記的資料，而是根據歷次行動獲得的獎勵進行調整。請問此系統最可能採用哪一種學習方法？</h2>
+      </div>
+      <ul class="options-list" id="opts-17">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">強化式學習（Reinforcement Learning）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">監督式學習（Supervised Learning）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">非監督式學習（Unsupervised Learning）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">遷移學習（Transfer Learning）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('17', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-17">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          智慧投資系統根據市場環境採取行動（買/賣/持有），不依賴預先標註答案，而是依據行動後的反饋（盈虧/報酬）逐步優化策略，這完全符合「強化學習（Reinforcement Learning）」中 Agent、Environment、Action、Reward 的定義。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：強化學習 (Reinforcement Learning)</div>
+          <p>智慧體（Agent）透過與環境互動試錯，以最大化長期累積獎勵（Reward）為目標進行決策。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 18 題 -->
+    <article class="question-card" id="q18">
+      <div class="question-header">
+        <span class="q-badge">第 18 題</span>
+        <h2 class="q-title">關於 Q-Learning 與 Deep Q-Learning，下列敘述何者最正確？</h2>
+      </div>
+      <ul class="options-list" id="opts-18">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">Q-Learning 與 Deep Q-Learning 的差異在於是否使用標記資料作為學習基礎</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">Q-Learning 可處理任意維度的狀態空間，因此比 Deep Q-Learning更靈活</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">Deep Q-Learning 透過深度神經網路近似 Q 值，避免了 Q 表在高維空間中難以擴展的問題</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">Deep Q-Learning 無法搭配經驗回放（Experience Replay），因為會導致樣本順序被打亂</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('18', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-18">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          傳統 Q-Learning 使用 Q 表格記錄狀態-行動對的價值，遇到連續或高維度狀態空間時會面臨「維度詛咒」；Deep Q-Learning (DQN) 引入深度神經網絡來近似 Q 函數，並搭配經驗回放（Experience Replay）解決此問題。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：Q-Learning 與 Deep Q-Learning</div>
+          <p>DQN 使用神經網路近似 Q 函數，打破 Q Table 無法處理高維連續狀態空間的限制。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 19 題 -->
+    <article class="question-card" id="q19">
+      <div class="question-header">
+        <span class="q-badge">第 19 題</span>
+        <h2 class="q-title">在訓練機器學習模型時，若任務為預測房價，應選用下列哪一種損失函數（Loss Function）來衡量預測誤差？</h2>
+      </div>
+      <ul class="options-list" id="opts-19">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">均方誤差（MSE）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">交叉熵損失（Cross-Entropy Loss）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">Hinge 損失（Hinge Loss）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">KL 散度（Kullback-Leibler Divergence）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('19', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-19">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          預測房價屬於「數值連續型」的迴歸（Regression）任務，應使用均方誤差（MSE, Mean Squared Error）或 MAE 等迴歸損失函數；交叉熵與 Hinge Loss 適用於分類任務，KL 散度用於機率分布差異衡量。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：損失函數：迴歸 vs 分類</div>
+          <p>迴歸任務（如房價、溫度）：MSE / MAE；分類任務（如二元、多元）：Cross-Entropy Loss。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 20 題 -->
+    <article class="question-card" id="q20">
+      <div class="question-header">
+        <span class="q-badge">第 20 題</span>
+        <h2 class="q-title">某醫院希望開發一個系統，根據患者的年齡、血壓與 BMI 等資訊，預測其罹患糖尿病的機率（0~1），並依據預測值是否超過 0.5 做出風險警示。下列哪一種模型最適合用於此分類任務？</h2>
+      </div>
+      <ul class="options-list" id="opts-20">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">邏輯迴歸（Logistic Regression）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">支援向量機（Support Vector Machine）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">決策樹（Decision Tree）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">K 平均演算法（K-means）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('20', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-20">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          任務需求是輸出罹患疾病的「機率值（0~1）」，並以 0.5 為閾值做警示，這正是邏輯迴歸（Logistic Regression）使用 Sigmoid 函數輸出後驗機率的經典應用情境。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：邏輯迴歸 (Logistic Regression)</div>
+          <p>透過 Sigmoid 函數將線性組合映射為 0~1 的機率值，最常用於二元分類與機率風險評估。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 21 題 -->
+    <article class="question-card" id="q21">
+      <div class="question-header">
+        <span class="q-badge">第 21 題</span>
+        <h2 class="q-title">某金融科技公司正開發一套違約風險預測系統，需大量處理不同客戶的財務特徵資料。考量到資料特徵數量眾多，且希望提升預測的穩定性與泛化能力，下列哪一種鑑別式 AI 模型最適合？</h2>
+      </div>
+      <ul class="options-list" id="opts-21">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">邏輯迴歸（Logistic Regression）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">支援向量機（Support Vector Machine）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">決策樹（Decision Tree）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">隨機森林（Random Forest）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('21', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-21">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          隨機森林（Random Forest）由多棵決策樹組成，透過 Bagging 與隨機特徵採樣，能有效應對高維度特徵，具備抗過擬合能力、泛化能力強且高度穩定，最適合高特徵數的違約風控情境。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：隨機森林 (Random Forest)</div>
+          <p>集成學習 Bagging 代表演算法，能降低模型變異數（Variance），在高維特徵資料上表現穩健。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 22 題 -->
+    <article class="question-card" id="q22">
+      <div class="question-header">
+        <span class="q-badge">第 22 題</span>
+        <h2 class="q-title">關於變分自編碼器（Variational Autoencoder, VAE）的運作流程，下列何者敘述最為正確？</h2>
+      </div>
+      <ul class="options-list" id="opts-22">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">解碼器的任務是將低維壓縮向量分類為不同類別</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">編碼器將輸入資料轉換為可視化圖像以利模型學習</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">編碼器將資料轉換為潛在空間表示，解碼器再重建資料</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">編碼器利用最大邊際機率對資料進行異常點偵測</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('22', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-22">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          變分自編碼器（VAE）包含編碼器與解碼器。編碼器將輸入資料對應為潛在空間（Latent Space）的機率分佈參數（均值與方差），解碼器再從潛在分佈採樣並重建出原始資料。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：變分自編碼器 (VAE)</div>
+          <p>Encoder 將資料編碼為潛在空間機率分佈 ➔ Decoder 從潛在空間採樣重建原始資料。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 23 題 -->
+    <article class="question-card" id="q23">
+      <div class="question-header">
+        <span class="q-badge">第 23 題</span>
+        <h2 class="q-title">下列何者不是我國數位發展部 AI 產品與系統評測中心對生成式 AI 的評測項目?</h2>
+      </div>
+      <ul class="options-list" id="opts-23">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">當責性</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">可靠性</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">隱私及資安</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">互動性</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('23', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-23">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          數位發展部 AI 產品與系統評測中心對生成式 AI 評測主要聚焦於資安、可信度與治理面向（當責性、可靠性、隱私及資安、公平性、透明性等），「互動性」屬於產品體驗，非安全與評測規範項目。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：數發部 AI 評測重點</div>
+          <p>評測項目側重信任與安全：可靠性、當責性、隱私、資安、公平透明；非 UI/UX 的互動性。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 24 題 -->
+    <article class="question-card" id="q24">
+      <div class="question-header">
+        <span class="q-badge">第 24 題</span>
+        <h2 class="q-title">在保持 GPT-OSS 模型架構不變的前提下，如果將模型參數量從 20 億提升至 120 億，並假設有足夠的訓練資料支撐，下列敘述何者最正確？</h2>
+      </div>
+      <ul class="options-list" id="opts-24">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">模型參數增加會線性提升效能，且即使訓練資料不變也不會遇到瓶頸</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">參數越多模型推理越快，因為每層可以並行計算更多參數</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">較大的參數量能提升模型的表達能力與預測效能，但需足夠訓練資料支持</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">增加參數量不影響記憶體使用，只會影響計算速度</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('24', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-24">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          在算力與訓練語料足夠的前提下，根據模型縮放定律（Scaling Law），大幅擴充參數量可增強模型的表徵容量與預測效能，但前提必須有相對應的高品質資料支持，否則可能欠擬合或訓練不全。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：大模型縮放定律 (Scaling Law)</div>
+          <p>增加參數量能提升模型表達能力，但需要足量訓練資料與算力支持，且推理記憶體與計算開銷同步增加。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 25 題 -->
+    <article class="question-card" id="q25">
+      <div class="question-header">
+        <span class="q-badge">第 25 題</span>
+        <h2 class="q-title">在自然語言處理任務中，為了減少訓練語料中偏見對模型的影響，下列哪種資料處理策略屬於常見的「資料去偏（Data Debiasing）」做法？</h2>
+      </div>
+      <ul class="options-list" id="opts-25">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">讓模型在訓練時隨機替換輸出，以抵消資料中存在的系統性偏差</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">增加模型的參數量，依賴更大的模型自動消除原始資料中的偏見</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">調整或擴充訓練語料，使不同群體或類型資料的比例更加平衡，避免模型過度偏向出現頻率高的類別</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">對訓練資料施加額外正則化或噪音，使模型在學習過程中對偏見敏感度降低</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('25', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-25">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          訓練資料中的偏見主要來自於少數群體樣本過少或代表性偏差。資料去偏（Data Debiasing）最實務且直接的方法為調整與增強語料，平衡各群體樣本分佈，避免模型向多數群體傾斜。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：AI 倫理：資料去偏 (Data Debiasing)</div>
+          <p>透過資料重抽樣、擴增少數群體語料，平衡資料集代表性，從源頭降低模型偏見。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 26 題 -->
+    <article class="question-card" id="q26">
+      <div class="question-header">
+        <span class="q-badge">第 26 題</span>
+        <h2 class="q-title">在深度學習模型的微調（Fine-tuning）過程中，可能出現所謂的「災難性遺忘（Catastrophic Forgetting）」。此現象最可能造成哪種情況？</h2>
+      </div>
+      <ul class="options-list" id="opts-26">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">由於計算資源或訓練步驟不足，模型在微調過程中無法完整收斂，導致學習效果受限</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">微調後模型的表現變得隨機，無法有效記憶新學到的模式與知識</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">微調後模型的部分權重產生偏移，導致模型無法針對較長的文字進行回應</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">模型過度適應微調的資料分佈，逐漸遺忘先前預訓練所獲得的廣泛知識，在原有任務或廣泛領域上表現變差</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('26', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-26">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          災難性遺忘（Catastrophic Forgetting）是指深度神經網絡在學習新任務或微調新領域數據時，過度更新網路權重，導致先前在大規模預訓練中學到的通用知識被覆蓋遺忘，在原本任務表現崩跌。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：災難性遺忘 (Catastrophic Forgetting)</div>
+          <p>微調過程中模型過度適應新任務分佈，破壞了原有預訓練權重，喪失舊任務處理能力。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 27 題 -->
+    <article class="question-card" id="q27">
+      <div class="question-header">
+        <span class="q-badge">第 27 題</span>
+        <h2 class="q-title">在大型 Transformer 模型的效能優化過程中，常見的方法之一是「剪枝（Pruning）」。下列哪一項最符合該方法的核心概念？</h2>
+      </div>
+      <ul class="options-list" id="opts-27">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">將模型中所有權重按比例縮小，使其值更接近零，以降低計算量</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">移除模型中影響較小或冗餘的部分權重參數，以減少模型大小並提升推理效率</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">在訓練時僅更新部分權重而將其他權重凍結，從而減少需要調整的參數數量</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">根據注意力分數動態跳過處理部分輸入 Token，以減少每次前向傳播的計算</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('27', 'B')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-27">
+        <div class="ans-summary">【正確答案】：(B)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          模型剪枝（Pruning）是指辨識出神經網路中權重數值極小、對輸出貢獻微弱的非必要神經元或連接權重並加以剔除，從而精簡模型體積、降低推論記憶體並提升推論速度。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：模型剪枝 (Model Pruning)</div>
+          <p>剔除冗餘或影響極小的權重參數，減少模型體積與計算需求，實現模型輕量化。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 28 題 -->
+    <article class="question-card" id="q28">
+      <div class="question-header">
+        <span class="q-badge">第 28 題</span>
+        <h2 class="q-title">對非常長的輸入序列進行推理（Inference），Transformer 模型推理的主要計算瓶頸通常是什麼？</h2>
+      </div>
+      <ul class="options-list" id="opts-28">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">模型輸出層產生文本的過程，因為每生成一個詞都必須重新訓練整個模型一次</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">詞嵌入 (Embedding) 查找操作，因為其時間複雜度隨詞彙表大小指數級增長</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">Softmax 函數的計算，因為對每個 Token 都需要執行繁重的運算</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">自注意力層的計算和其記憶體使用，因為注意力矩陣的大小隨序列長度呈平方級增長</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('28', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-28">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          Transformer 自注意力機制（Self-Attention）需要計算輸入序列中每兩個 Token 之間的交互權重，其注意力矩陣運算複雜度與記憶體佔用皆隨序列長度呈平方增長 O(N²)，是長序列推理的核心計算瓶頸。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：Transformer 瓶頸：自注意力 O(N²)</div>
+          <p>自注意力矩陣之計算與 KV Cache 記憶體消耗隨序列長度成二次方增長，長序列推論運算負擔極大。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 29 題 -->
+    <article class="question-card" id="q29">
+      <div class="question-header">
+        <span class="q-badge">第 29 題</span>
+        <h2 class="q-title">在「可解釋人工智慧（Explainable AI, XAI）」領域中，LIME（LocalInterpretable Model-agnostic Explanations）方法最核心的應用目的是什麼？</h2>
+      </div>
+      <ul class="options-list" id="opts-29">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">解釋單一樣本（局部預測）的黑箱模型決策過程</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">全面提升黑箱模型整體的預測準確度</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">將黑箱模型轉換成完全可解釋的模型作為替代</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">用於生成大量擬真數據來替代訓練集</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('29', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-29">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          LIME（Local Interpretable Model-agnostic Explanations）的核心概念是「局部可解釋性」：在待解釋的單一樣本周圍進行局部擾動採樣，並利用簡單可解釋模型（如線性模型）擬合，藉以解釋黑箱模型對該單一樣本的局部決策理由。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：可解釋 AI：LIME</div>
+          <p>局部可解釋、無關模型架構（Model-agnostic），專注於解釋單一特定樣本的黑箱決策原因。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 30 題 -->
+    <article class="question-card" id="q30">
+      <div class="question-header">
+        <span class="q-badge">第 30 題</span>
+        <h2 class="q-title">在 醫 療 診 斷 決 策 支 援 系 統 等 高 風 險 領 域 中 ，「 可 解 釋 人 工 智 慧（Explainable AI, XAI）」的核心價值最主要呈現在哪個面向？</h2>
+      </div>
+      <ul class="options-list" id="opts-30">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">透過提供可理解的決策依據，促進患者與醫療專業人員對系統診斷結果的信任與接受度</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">以可解釋性方法優化臨床資料蒐集與管理流程，從而降低整體醫療作業成本</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">利用解釋機制增強模型預測的統計顯著性與準確度，使其在研究及實務應用中更具科學性</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">透過提供透明化的運作過程，進而減輕臨床人員負擔，並提升醫療服務的整體效率</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('30', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-30">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          醫療診斷屬於攸關生命的高風險領域。XAI（可解釋 AI）能讓醫師與病患清楚了解模型提出診斷背後的生物特徵依據，大幅提升臨床專業人員對 AI 判斷的信賴度與採用接受度。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：高風險領域之 XAI 價值</div>
+          <p>在醫療與金融等高風險領域，可解釋性是建立人機信任、符合合規與促進臨床採用的關鍵基石。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 31 題 -->
+    <article class="question-card" id="q31">
+      <div class="question-header">
+        <span class="q-badge">第 31 題</span>
+        <h2 class="q-title">在金融科技公司的信貸決策系統中，導入反事實解釋（CounterfactualExplanation）時，實際部署往往伴隨技術與監管挑戰。下列哪一項最符合該情境下的核心挑戰？</h2>
+      </div>
+      <ul class="options-list" id="opts-31">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">需要建立完整的客戶行為預測模型來估算建議改變的實施成本，並整合到現有的風險管理系統架構中</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">必須使用聯邦學習技術保護客戶隱私，同時在分散式環境中計算跨機構的反事實解釋結果</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">需要建構時間序列因果圖來處理客戶信用狀況的動態變化，並預測未來可能的信用評分軌跡</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">生成的反事實樣本必須滿足特徵間的因果約束和業務邏輯約束，同時確保建議的改變在現實中具有可操作性且符合公平放貸法規</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('31', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-31">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          反事實解釋（Counterfactual Explanation）回答「輸入需要做何種最小改變，才能讓決策結果改變（例如貸款被拒變核准）」。在金融信貸中，建議的改變必須在現實中具備因果可操作性（如年齡不可變、工作年資需合理）且符合公平放貸法規。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：反事實解釋 (Counterfactual)</div>
+          <p>給出結果翻轉所需的最小改變，但該建議必須符合現實因果邏輯、可操作性與法規合規。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 32 題 -->
+    <article class="question-card" id="q32">
+      <div class="question-header">
+        <span class="q-badge">第 32 題</span>
+        <h2 class="q-title">在統計推論中，若樣本來自母體但呈現明顯偏態分布，且樣本數有限，下列哪一項策略最能減少推估母體參數的偏誤？</h2>
+      </div>
+      <ul class="options-list" id="opts-32">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">直接使用樣本平均數與變異數估計母體參數，不做任何調整</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">增加樣本數並考慮使用分位數或中位數作為中心趨勢估計</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">將樣本隨機重新排列後，多次計算平均值以消除偏態影響</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">完全依賴樣本標準差來估計母體參數，忽略分布形態</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('32', 'B')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-32">
+        <div class="ans-summary">【正確答案】：(B)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          當母體呈現明顯偏態且樣本數有限時，平均數極易受到極端值拉偏；此時使用中位數（Median）或分位數等穩健統計量（Robust Statistics）能有效代表中心趨勢，減少估計偏誤。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：偏態分佈的中心趨勢估計</div>
+          <p>偏態數據 ➔ 使用中位數 (Median) / 四分位距；常態數據 ➔ 平均數 (Mean) / 標準差。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 33 題 -->
+    <article class="question-card" id="q33">
+      <div class="question-header">
+        <span class="q-badge">第 33 題</span>
+        <h2 class="q-title">在工業物聯網架構中，進行設備預測性維護（Predictive Maintenance）時，若面對異常事件發生頻率極低、樣本高度不平衡的時間序列資料，下列哪一種方法最能兼顧模型穩定性與異常偵測效能？</h2>
+      </div>
+      <ul class="options-list" id="opts-33">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">將每筆異常事件資料複製多次以提升模型對異常的辨識敏感度，搭配全序列訓練模型（如 LSTM）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">對時間序列進行差分與標準化後，使用傳統監督式學習模型（如SVM）進行分類訓練</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">使用經過時間序列特化的 SMOTE 技術生成異常樣本，以平衡異常與正常資料比例</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">採 用 基 於 重 建 誤 差 的 自 編 碼 器 模 型 （ Sequence-to-SequenceAutoencoder）進行異常偵測，並僅使用正常資料進行訓練</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('33', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-33">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          異常偵測在正負樣本極度不平衡且異常型態未知的狀況下，最佳做法是「單類別學習」：僅使用大量正常資料訓練 Autoencoder。推論時若輸入異常時間序列，模型因未曾學過而重建誤差（Reconstruction Error）飆高，藉此準確抓出異常。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：重建誤差異常偵測 (Autoencoder)</div>
+          <p>僅用正常資料訓練自編碼器；異常資料會產生極高重建誤差，是工業時序預測維護的標準解法。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 34 題 -->
+    <article class="question-card" id="q34">
+      <div class="question-header">
+        <span class="q-badge">第 34 題</span>
+        <h2 class="q-title">在零售業進行客戶行為分析時，資料倉儲中發現多個欄位儲存相同的購買金額資訊（例如：amount_usd、total_price、transaction_value），但其單位、命名慣例及格式不一致，進而導致特徵工程階段混淆模型輸入。針對此種跨欄位語義重疊與結構冗餘問題，下列哪一種資料處理策略最合適且具實務可行性？</h2>
+      </div>
+      <ul class="options-list" id="opts-34">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">利用資料探勘技術自動選擇資料集中對目標變數最敏感的欄位，其他欄位捨棄即可，避免過度清理干擾原始結構</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">保留所有相似欄位，交由高階模型（如 Gradient Boosting 或 DeepLearning）自動學習特徵關聯，無需手動處理</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">建立欄位命名標準，統一金額單位與格式，進行欄位正規化與語義合併，減少重複資訊影響特徵重要性估計</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">將重複欄位視為類別欄位，進行 One-hot 編碼（One-hot encoding）後輸入模型，以避免數值誤導模型學習過程</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('34', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-34">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          面對多個欄位儲存相同金額、單位與命名格式不一的語義重疊與結構冗餘，標準且嚴謹的資料工程作法為「統一命名標準與貨幣單位，進行欄位正規化與合併」，消除特徵冗餘對權重估計的干擾。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：資料正規化與特徵清理</div>
+          <p>統一命名規範、對齊計量單位與語意合併，避免多重共線性及特徵重要性失真。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 35 題 -->
+    <article class="question-card" id="q35">
+      <div class="question-header">
+        <span class="q-badge">第 35 題</span>
+        <h2 class="q-title">某大型零售企業準備將商品推薦模型上線，專案團隊在檢視訓練資料時，發現部分商品類別（例如高價商品）樣本數量極少，而多數樣本集中於低價商品。若此不平衡問題未妥善處理，下列何種狀況最可能在實際推薦結果中發生？</h2>
+      </div>
+      <ul class="options-list" id="opts-35">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">模型在預測時傾向輸出稀有類別，導致雖能捕捉到少數樣本，但精確率（Precision）顯著下降</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">模型由於類別分布不均，難以建立有效的線性分離邊界，進而無法收斂</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">模型過度聚焦於稀有類別樣本，導致對多數類別的預測能力下降，整體效能受損</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">模型學到的決策邊界主要由多數類別主導，忽視了稀有類別，造成該類別的召回率（Recall）大幅降低</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('35', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-35">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          當訓練資料中絕大多數為低價商品，稀有類別（高價商品）佔比極低時，模型為了追求整體準確率（Accuracy），決策邊界會被多數類別主導，導致模型幾乎不預測少數類別，少數類別的召回率（Recall）大幅下降。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：類別不平衡對指標之影響</div>
+          <p>多數類別主導決策邊界 ➔ 稀有類別被大量漏判 ➔ 召回率 (Recall) 驟降。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 36 題 -->
+    <article class="question-card" id="q36">
+      <div class="question-header">
+        <span class="q-badge">第 36 題</span>
+        <h2 class="q-title">某電商資料團隊要協助行銷部門規劃再行銷策略。目前取得資料包含使用者點擊、購買紀錄、流量來源與轉換率。若資料團隊希望先進行探索性資料分析（EDA），下列哪一項最符合 EDA 的做法？</h2>
+      </div>
+      <ul class="options-list" id="opts-36">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">建立隨機森林模型，預測使用者是否會完成購買</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">使用 K-means 對使用者群進行分群並立即制定對應促銷策略</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">繪製各類流量來源對轉換率的關聯圖，尋找潛在關係</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">對不同購物路徑設定統計假設並進行雙樣本 t 檢定</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('36', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-36">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          探索性資料分析（EDA, Exploratory Data Analysis）旨在透過視覺化與基礎統計量洞察資料特徵與關聯性。繪製不同流量來源與轉換率的關聯圖表，正是典型的 EDA 探索手段；建立模型與假設檢定已進入後續建模與推論階段。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：探索性資料分析 (EDA)</div>
+          <p>以視覺化圖表與敘述統計，發掘變數關聯、資料分佈與潛在異常，作為特徵工程與建模基礎。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 37 題 -->
+    <article class="question-card" id="q37">
+      <div class="question-header">
+        <span class="q-badge">第 37 題</span>
+        <h2 class="q-title">某金融科技公司在利用歷史交易資料建立風險控管模型時，嘗試推估整體詐騙交易比例。近期發現，樣本間存在明顯的時間序列相關性，導致模型在實際偵測新交易時誤判率升高。若希望同時改善詐騙比例推估的準確性並提升模型的穩健性，下列哪一種做法最為合適？</h2>
+      </div>
+      <ul class="options-list" id="opts-37">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">擴充樣本數量，以涵蓋更多潛在的詐騙型態，但維持既有的隨機抽樣方式不變</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">採取時間序列敏感的抽樣策略，例如依據交易時間區間進行分層，以保存原始的時間結構特性</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">將資料完全隨機打散，以降低序列相關性對模型訓練造成的影響</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">在模型評估時，針對相鄰時間區段進行誤差合併，以便用整體估計方式修正詐騙比例</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('37', 'B')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-37">
+        <div class="ans-summary">【正確答案】：(B)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          時間序列資料存在前後關聯性與資料漂移（Data Drift），隨機打散會破壞時間因果關係並導致資料外洩。應採取時間序列敏感的抽樣與切割（如依交易時間進行分層抽樣或滑動窗口），以保持時間序列特徵。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：時間序列抽樣與驗證</div>
+          <p>時間序列嚴禁隨機打散 (Shuffle)；必須依時間順序分層分割，避免未來看向過去的資料外洩。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 38 題 -->
+    <article class="question-card" id="q38">
+      <div class="question-header">
+        <span class="q-badge">第 38 題</span>
+        <h2 class="q-title">某公司建置基於檢索增強生成（RAG）的知識查詢系統，需同時兼顧查詢效能與資料的即時更新。近期發現回應內容偶爾過時，且每次更新文件都需完整重建索引，導致系統在更新期間無法服務。若要解決此問題並提升整體穩健性，下列哪項做法最適合？</h2>
+      </div>
+      <ul class="options-list" id="opts-38">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">調整生成模型的回應隨機性參數，以降低答案偏差並提升一致性</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">提升檢索與索引的運算效能，以縮短查詢與更新所需時間</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">採用索引的增量或分段更新方式，使新資料能即時納入而不需全部重建</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">建立常見問題的標準答案集，透過快速檢索回應以降低模型負擔</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('38', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-38">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          RAG 系統若每次更新都需全量重建向量索引，成本過高且中斷服務。採用「增量更新（Incremental Update）」或分段索引分塊機制，新進文件即時向量化寫入新分區，即可兼顧查詢時效與系統高可用性。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：RAG 索引架構優化</div>
+          <p>向量資料庫支援增量索引 (Incremental Indexing) 與分段更新，實現零停機資料即時熱更新。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 39 題 -->
+    <article class="question-card" id="q39">
+      <div class="question-header">
+        <span class="q-badge">第 39 題</span>
+        <h2 class="q-title">某醫院計畫開發住院日數預測模型，以協助病房調度。多數病人的住院日數集中在 3–7 天，但仍有少數重症患者因治療需求而住院日數明顯偏長。醫院希望採用一種合適的評估方式，既能兼顧大部分病人的預測準確度，也能確保對重症個案的預測維持穩健。下列哪一種方法最符合此需求？</h2>
+      </div>
+      <ul class="options-list" id="opts-39">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">在模型檢核時，同時呈現平均絕對誤差（MAE）與重症子群的誤差指標</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">僅針對一般病人樣本進行交叉驗證，以避免重症個案拉高誤差</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">將所有病人的住院日數進行標準化處理，以減少數值範圍差異的影響</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">只採用單一的整體決定係數 (R²) 作為模型優劣的判斷依據</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('39', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-39">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          住院日數呈現偏態（長尾分佈），使用單一指標無法兼顧全局。評估模型時，同時檢視整體 MAE 與針對長尾重症子群的專屬指標，能客觀評估模型在一般病患與重症病患上的表現。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：長尾偏態分佈之分群評估</div>
+          <p>對於具明顯長尾的迴歸任務，應同時追蹤整體指標與特定長尾子群指標，避免極端案例失真。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 40 題 -->
+    <article class="question-card" id="q40">
+      <div class="question-header">
+        <span class="q-badge">第 40 題</span>
+        <h2 class="q-title">關 於 監 督 式 學 習 （ Supervised Learning ） 與 非 監 督 式 學 習（Unsupervised Learning）的目標，下列敘述何者錯誤？1.非監督式學習的核心在於發掘資料內在結構，例如分群、關聯規則與降維，而不依賴外部標籤。2.監督式學習的典型應用為分類與迴歸，通常不適合應用於異常偵測任務。3.非監督式學習若搭配少量標註資料，即會完全轉化為監督式學習。4.監督式學習仰賴已標註的資料集，透過最小化輸出與真實標籤之間的差距，學習輸入與目標之間的對應函數。5.所有監督式學習任務都必須要有大量完整標註資料，否則無法進行任何有效的模型訓練。6.非監督式學習不需要目標變數，僅透過輸入資料本身的特徵分布進行模式學習。</h2>
+      </div>
+      <ul class="options-list" id="opts-40">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">3、5、6</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">1、4、6</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">2、4、6</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">2、3、5</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('40', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-40">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          題目要求選出錯誤敘述：敘述 2 錯誤（監督式分類如二元分類亦廣泛用於異常偵測）；敘述 3 錯誤（非監督搭配少量標註為『半監督式學習』，非完全轉化為監督學習）；敘述 5 錯誤（少樣本學習或預訓練微調不需大量完整標註）。故錯誤者為 2、3、5。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：機器學習觀念辨正</div>
+          <p>非監督+少標註=半監督學習；監督學習分類演算法常用於異常檢測；遷移學習不需大量標註。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 41 題 -->
+    <article class="question-card" id="q41">
+      <div class="question-header">
+        <span class="q-badge">第 41 題</span>
+        <h2 class="q-title">一家旅遊平台希望建立模型，預測顧客下次是否會再次透過該平台訂房。資料包含：顧客 ID、年齡、旅遊次數、平均花費金額、主要交通方式（火車/飛機/自駕/公車）、會員等級（普通/進階/白金）、是否為海外旅遊等。下列哪一種特徵工程方法最適合處理「主要交通方式」欄位？</h2>
+      </div>
+      <ul class="options-list" id="opts-41">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">布林轉換（Boolean Conversion）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">序數編碼（Ordinal Encoding）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">數值標準化（Numerical Standardization）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">One-hot 編碼（One-hot Encoding）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('41', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-41">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          「主要交通方式（火車/飛機/自駕/公車）」屬於無先後順序、無大小之別的「名目類別特徵（Nominal Categorical Feature）」，最適合採用 One-hot 編碼（獨熱編碼）轉化為二元指示向量。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：名目變數編碼：One-hot Encoding</div>
+          <p>無等級大小關聯的類別變數 ➔ One-hot 編碼；具高低階層等級的變數 ➔ 序數編碼 (Ordinal)。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 42 題 -->
+    <article class="question-card" id="q42">
+      <div class="question-header">
+        <span class="q-badge">第 42 題</span>
+        <h2 class="q-title">一家跨國醫療研究機構希望利用各地醫院的病患資料，建立一個能夠預測疾病早期風險的機器學習模型。由於各國法規限制，病患的原始資料無法集中到單一伺服器。在此情境下，下列哪一種方法最能同時滿足「各醫院保留資料不外流」與「模型仍能跨院學習」的需求？</h2>
+      </div>
+      <ul class="options-list" id="opts-42">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">資料匿名化（Data Anonymization）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">差分隱私（Differential Privacy）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">聯邦學習（Federated Learning）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">交叉驗證（Cross-validation）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('42', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-42">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          聯邦學習（Federated Learning）的核心設計理念就是「資料不動、模型動」：原始資料保留在各地機構本地端不外流，只在中央伺服器聚合各醫院更新的模型參數（梯度），完美兼顧隱私法規與協同訓練需求。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：隱私計算：聯邦學習 (Federated Learning)</div>
+          <p>原始資料留在本地不外洩，透過加密傳輸與聚合模型參數進行分散式協同訓練。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 43 題 -->
+    <article class="question-card" id="q43">
+      <div class="question-header">
+        <span class="q-badge">第 43 題</span>
+        <h2 class="q-title">某公司欲建立員工離職風險預測模型，資料集中包含「年度績效分數」、「平均每月加班時數」、「年齡」等數值型特徵。由於各特徵的數值範圍差異極大（例如績效分數 1–5、加班時數 0–80、年齡 20–65），若直接輸入至使用梯度下降的邏輯迴歸(Logistic Regression)模型，可能導致模型收斂緩慢或權重偏斜。為提升模型訓練效率與準確度，下列哪一種特徵工程方法最適合應用於這些數值特徵？</h2>
+      </div>
+      <ul class="options-list" id="opts-43">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">布林轉換（Boolean Conversion）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">時間序列分解（Time Series Decomposition）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">One-hot 編碼（One-hot Encoding）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">數值標準化（Numerical Standardization）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('43', 'D')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-43">
+        <div class="ans-summary">【正確答案】：(D)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          績效分數(1-5)、加班時數(0-80)、年齡(20-65)之數值尺度差距大，梯度下降法在此情況下損失等高線會呈扁平橢圓，造成震盪與緩慢收斂。透過數值標準化（Standardization/Z-score），將特徵縮放至均值 0 方差 1，可大幅加速收斂。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：數值標準化加速梯度收斂</div>
+          <p>消除特徵尺度的量綱差異，使梯度下降方向更平滑直接，顯著加速訓練收斂速度。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 44 題 -->
+    <article class="question-card" id="q44">
+      <div class="question-header">
+        <span class="q-badge">第 44 題</span>
+        <h2 class="q-title">在機器學習中，「叢集（Clustering）」方法最典型的應用情境是下列何者？</h2>
+      </div>
+      <ul class="options-list" id="opts-44">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">根據歷史交易紀錄與已標註的詐欺案例，訓練模型來偵測未來的詐欺交易</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">使用醫療數據與病患的診斷標籤，建立模型以預測病人是否罹患特定疾病</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">根據顧客的消費行為與特徵，將顧客自動劃分為數個群組，以便進行差異化行銷</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">透過大量已標註影像，訓練深度學習模型來辨識照片中的物件種類</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('44', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-44">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          「叢集（分群，Clustering）」是非監督式學習的代表，用於將無標籤的樣本依相似度劃分成多個群體。在商業中，依據顧客消費特徵自動分群以進行客製化分眾行銷，是最具代表性的應用情境。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：叢集分析典型應用：客群劃分</div>
+          <p>無標籤資料透過相似度度量（如歐氏距離）凝聚為群，實現差異化分眾策略。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 45 題 -->
+    <article class="question-card" id="q45">
+      <div class="question-header">
+        <span class="q-badge">第 45 題</span>
+        <h2 class="q-title">某醫院研究團隊蒐集了大量病患的「收縮壓」數據，經檢驗後顯示此數值大致呈現常態分布。在進行後續模型分析前，研究人員希望妥善處理可能存在的極端血壓數值。下列哪一種做法最為合適？</h2>
+      </div>
+      <ul class="options-list" id="opts-45">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">將所有極端偏高或偏低的血壓數據直接刪除，以保留最具代表性的病患樣本</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">使用對數轉換（Log Transformation），將數據壓縮至更接近常態，以降低極端值的影響</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">透過 Z 分數（Z-score）或標準差範圍檢測異常值，並依研究需求決定是否調整或移除</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">將檢測到的離群值以 Label Encoding 編碼，轉換為序號標籤以避免影響原始分布</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('45', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-45">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          收縮壓大致呈現常態分佈，檢測離群值最科學嚴謹的方法是透過常態分佈的 Z 分數（Z-score，如 |Z| &gt; 3）或標準差倍數檢驗，再經由專業臨床判斷進行適當處理，不可盲目全數刪除。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：常態分佈異常值檢驗：Z-score</div>
+          <p>對於常態分佈數據，採用 Z-score (|Z| &gt; 3) 檢驗極端離群值，兼顧統計客觀性與領域專業判斷。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 46 題 -->
+    <article class="question-card" id="q46">
+      <div class="question-header">
+        <span class="q-badge">第 46 題</span>
+        <h2 class="q-title">某電商公司想預測用戶是否會購買特定商品，資料中包含多種用戶屬性與行為特徵。分析師希望選出對購買結果最有預測價值的特徵，以提升模型效能。下列哪一種描述最符合監督式特徵選擇（SupervisedFeature Selection）的概念？</h2>
+      </div>
+      <ul class="options-list" id="opts-46">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">根據特徵的整體分布、變異度或資訊量進行篩選，而不直接參考目標變數</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">評估每個特徵與目標變數之間的相關性，選擇對預測結果貢獻最大的特徵</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">使用模型評估特徵對預測結果的重要性，並保留對目標變數影響較大的欄位</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">將特徵透過降維方法（如 PCA）轉換為新特徵，再用於模型訓練</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('46', 'B')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-46">
+        <div class="ans-summary">【正確答案】：(B)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          「監督式特徵選擇」與非監督式的最大差別在於：它會主動計算特徵與「目標變數（Label）」之間的相關性、互資訊或使用模型特徵重要度，挑選對目標變數最具預測價值的特徵欄位。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：監督式特徵選擇 (Supervised Feature Selection)</div>
+          <p>依據特徵與目標標籤（Label）間的關聯程度或貢獻度進行篩選，強化對目標的預測能力。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 47 題 -->
+    <article class="question-card" id="q47">
+      <div class="question-header">
+        <span class="q-badge">第 47 題</span>
+        <h2 class="q-title">在訓練神經網路時，為了提升模型收斂速度與穩定性，避免梯度消失或梯度爆炸，下列哪一種做法最常被使用？</h2>
+      </div>
+      <ul class="options-list" id="opts-47">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">對輸入資料進行隨機旋轉或水平翻轉，以增加資料多樣性</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">選用 ReLU 或其變體作為隱藏層的啟動函數，以改善梯度傳播</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">減少樣本量提升訓練速度</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">對目標變數或特徵進行標準化</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('47', 'B')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-47">
+        <div class="ans-summary">【正確答案】：(B)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          ReLU（Rectified Linear Unit）啟動函數在正半區導數恆為 1，能有效緩解傳統 Sigmoid 或 Tanh 函數在深層神經網路反向傳播時發生的梯度消失問題，大幅提升訓練穩定度與收斂速度。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：啟動函數：ReLU 改善梯度傳播</div>
+          <p>ReLU 在正區間導數為 1，無飽和區間，有效解決深度網路的梯度消失問題。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 48 題 -->
+    <article class="question-card" id="q48">
+      <div class="question-header">
+        <span class="q-badge">第 48 題</span>
+        <h2 class="q-title">若希望檢視某一連續型數據的分布情形（如集中程度、偏態或是否呈現多峰），下列哪一種應用情境最適合使用直方圖（Histogram） 來進行分析？</h2>
+      </div>
+      <ul class="options-list" id="opts-48">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">探討顧客年齡資料的整體分布特徵，並檢視是否存在異常集中或分散現象</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">比較不同商品在各月份的銷售額變化趨勢，以觀察季節性波動</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">追蹤公司近一年營收的時間序列變化，以了解整體成長趨勢</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">檢視產品價格與月銷售量之間的關聯性，以評估是否具線性相關</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('48', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-48">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          直方圖（Histogram）專門用於呈現「單一連續型數值變數」的次數分佈情況，能清楚觀察資料的集中趨勢、偏態、峰度以及是否呈現雙峰或多峰分佈特徵。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：直方圖 (Histogram)</div>
+          <p>連續型單變數分佈視覺化工具，快速洞察資料偏態、集中度與多峰分佈狀態。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 49 題 -->
+    <article class="question-card" id="q49">
+      <div class="question-header">
+        <span class="q-badge">第 49 題</span>
+        <h2 class="q-title">下列何者並非我國數位發展部 AI 產品與評測中心在評估大型語言模型安全性時，所指出的常見使用指標？</h2>
+      </div>
+      <ul class="options-list" id="opts-49">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">資料複雜性</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">事實正確性</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">偏見與歧視</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">惡意與濫用可能性</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('49', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-49">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          數位發展部 AI 產品與系統評測中心評估大語言模型安全與可信賴指標時，著重於偏見與歧視、惡意濫用風險、事實正確性（幻覺問題）等風險控制，「資料複雜性」並非評測安全性的指標。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：LLM 評測安全性核心指標</div>
+          <p>著眼於事實正確性 (幻覺抑制)、避免偏見歧視、防範惡意與濫用攻擊。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 第 50 題 -->
+    <article class="question-card" id="q50">
+      <div class="question-header">
+        <span class="q-badge">第 50 題</span>
+        <h2 class="q-title">某雲端服務公司計畫將大型語言模型部署於線上系統，並以批次推論（Batch Inference）方式處理每日上百萬筆用戶請求。專案團隊在評估可能遇到的挑戰時，下列哪一項通常不會被視為批次推論階段的主要難題？</h2>
+      </div>
+      <ul class="options-list" id="opts-50">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">如何確保訓練語料的涵蓋性與標註品質，以避免模型偏差影響輸出</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">當批次規模增大時，如何降低推論延遲並保持即時回應能力</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">在推論過程中，有效管理與分配龐大的輸入資料量以避免資源壅塞</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">在叢集環境中精確安排推論任務，以提升 GPU/TPU 等硬體資源的利用率</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('50', 'A')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-50">
+        <div class="ans-summary">【正確答案】：(A)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          批次推論（Batch Inference）是「已訓練完成之模型在部署與推論階段」的議題，難題在於推論延遲、顯存調度、排程優化等；「訓練語料涵蓋性與標註品質」屬於『模型訓練前置階段』的工作，非推論階段議題。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：批次推論 (Batch Inference) 核心考量</div>
+          <p>推論階段著重排程、硬體吞吐量與延遲管理；訓練語料品質為訓練階段的前置考量。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 底部返回導覽 -->
+    <div style="text-align: center; margin: 3rem 0;">
+      <a href="../index.html" class="btn-back-home">← 返回題庫首頁</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>iPAS AI 應用規劃師互動題庫專案 &copy; 2026. 專為高效率通過認證設計。</p>
+  </footer>
+
+  <script>
+    function toggleAnswer(qid, correctAns) {
+      const expPanel = document.getElementById('exp-' + qid);
+      const optsList = document.getElementById('opts-' + qid);
+      const btn = event.currentTarget;
+      
+      const isShowing = expPanel.classList.toggle('show');
+      
+      const options = optsList.querySelectorAll('.option-item');
+      options.forEach(opt => {
+        if (opt.getAttribute('data-opt') === correctAns) {
+          if (isShowing) {
+            opt.classList.add('correct');
+          } else {
+            opt.classList.remove('correct');
+          }
+        }
+      });
+
+      if (isShowing) {
+        btn.innerHTML = '隱藏答案與解析';
+        btn.classList.add('active');
+      } else {
+        btn.innerHTML = '💡 顯示答案與詳細解析';
+        btn.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>

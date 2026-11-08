@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第 42 題 - 114年第四次 AI應用規劃師【第一科：人工智慧基礎概論】</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- 頂部導覽列 (Navbar) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span>⚡</span> iPAS AI 互動題庫
+      </a>
+      <div style="display: flex; gap: 0.5rem;">
+        <a href="quiz-01-ai-basic.html" class="nav-link">📋 查看全部50題</a>
+        <a href="../index.html" class="nav-link">← 返回題庫首頁</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 單元標題 (Hero Section) -->
+  <section class="hero">
+    <div class="hero-container">
+      <span class="badge">人工智慧基礎概論 ‧ 單題精準複習</span>
+      <h1>第 42 題 / 共 50 題</h1>
+      <p>114 年第四次 AI 應用規劃師 初級能力鑑定 公告試題</p>
+    </div>
+  </section>
+
+  <!-- 主考題互動區 -->
+  <main class="container">
+    <article class="question-card" id="q42">
+      <div class="question-header">
+        <span class="q-badge">第 42 題</span>
+        <h2 class="q-title">一家跨國醫療研究機構希望利用各地醫院的病患資料，建立一個能夠預測疾病早期風險的機器學習模型。由於各國法規限制，病患的原始資料無法集中到單一伺服器。在此情境下，下列哪一種方法最能同時滿足「各醫院保留資料不外流」與「模型仍能跨院學習」的需求？</h2>
+      </div>
+      <ul class="options-list" id="opts-42">
+        <li class="option-item" data-opt="A">
+          <span class="option-label">(A)</span>
+          <span class="option-text">資料匿名化（Data Anonymization）</span>
+        </li>
+        <li class="option-item" data-opt="B">
+          <span class="option-label">(B)</span>
+          <span class="option-text">差分隱私（Differential Privacy）</span>
+        </li>
+        <li class="option-item" data-opt="C">
+          <span class="option-label">(C)</span>
+          <span class="option-text">聯邦學習（Federated Learning）</span>
+        </li>
+        <li class="option-item" data-opt="D">
+          <span class="option-label">(D)</span>
+          <span class="option-text">交叉驗證（Cross-validation）</span>
+        </li>
+      </ul>
+      <div class="action-area">
+        <button type="button" class="btn-toggle" onclick="toggleAnswer('42', 'C')">
+          💡 顯示答案與詳細解析
+        </button>
+      </div>
+      <div class="explanation-panel" id="exp-42">
+        <div class="ans-summary">【正確答案】：(C)</div>
+        <div class="ans-content">
+          <strong>【核心觀念解析】：</strong><br>
+          聯邦學習（Federated Learning）的核心設計理念就是「資料不動、模型動」：原始資料保留在各地機構本地端不外流，只在中央伺服器聚合各醫院更新的模型參數（梯度），完美兼顧隱私法規與協同訓練需求。
+        </div>
+        <div class="concept-card">
+          <div class="concept-card-title">📌 記憶小卡 / 精華觀念摘要：隱私計算：聯邦學習 (Federated Learning)</div>
+          <p>原始資料留在本地不外洩，透過加密傳輸與聚合模型參數進行分散式協同訓練。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 單題翻頁切換與返回 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 2.5rem 0; flex-wrap: wrap; gap: 1rem;">
+      <a href="quiz-01-q41.html" class="nav-link" style="padding: 0.6rem 1.2rem;">← 上一題</a>
+      <a href="quiz-01-ai-basic.html" class="btn-back-home" style="margin-bottom: 0;">📑 完整清單模式 (全50題)</a>
+      <a href="quiz-01-q43.html" class="nav-link" style="padding: 0.6rem 1.2rem;">下一題 →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>iPAS AI 應用規劃師互動題庫專案 &copy; 2026. 專為高效率通過認證設計。</p>
+  </footer>
+
+  <script>
+    function toggleAnswer(qid, correctAns) {
+      const expPanel = document.getElementById('exp-' + qid);
+      const optsList = document.getElementById('opts-' + qid);
+      const btn = event.currentTarget;
+      
+      const isShowing = expPanel.classList.toggle('show');
+      
+      const options = optsList.querySelectorAll('.option-item');
+      options.forEach(opt => {
+        if (opt.getAttribute('data-opt') === correctAns) {
+          if (isShowing) {
+            opt.classList.add('correct');
+          } else {
+            opt.classList.remove('correct');
+          }
+        }
+      });
+
+      if (isShowing) {
+        btn.innerHTML = '隱藏答案與解析';
+        btn.classList.add('active');
+      } else {
+        btn.innerHTML = '💡 顯示答案與詳細解析';
+        btn.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>
